@@ -1,0 +1,20 @@
+<h1 class="text-center">Questions Section</h1>
+<hr>
+<button [routerLink]="['/admin/add']" class="btn btn-primary">Click here to add New Questions</button>
+<hr>
+<h2 class="text-center">List Of Questions</h2>
+<ol>
+  <li *ngFor="let person of questions.questions">
+    {{ person.name }}
+    <table>      
+      <tr *ngFor="let option of person.options">
+        <ul>
+          <li>
+            <td>{{option.name}}</td>
+            <td>{{option.isAnswer}}</td>
+          </li>
+        </ul>
+      </tr>
+    </table>
+  </li>
+</ol>

@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6 form-group">
+      <label>Competency</label>
+      <select class="form-control">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select>
+    </div>
+    <div class="col-6 form-group">
+      <label>Technology </label>
+      <select class="form-control">
+        <option value="volvo1">Volvo</option>
+        <option value="saab2">Saab</option>
+        <option value="mercedes3">Mercedes</option>
+        <option value="audi4">Audi</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 form-group ">
+      <input type="text" class="form-control" placeholder="Please Enter Question">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 form-group">
+      <input type="text" [(ngModel)]="option" class="form-control" placeholder="Options">
+    </div>
+    <div class="col-6 form-group">
+      <input type="button" class="btn btn-success" (click)="addOptions()" value="Add options">
+    </div>
+  </div>
+  <div class="row">
+    <div class=" col-2 form-group">
+      <label for="options">Options:</label>
+    </div>
+    <div class="col-8">
+      <div *ngFor="let option of options">
+        <label>
+          <input type="radio" name="options" (change)="onSelectionChange(option)" value="{{option.value}}" [checked]="option.checked"
+          /> {{option.name}}
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 form-group">
+      <input type="button" (click)="onSave()" class="btn btn-primary" value="Save">
+    </div>
+  </div>
+</div>
