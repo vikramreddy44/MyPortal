@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
     ExamRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+	
   ],
   declarations: [ExamComponent, HomeComponent]
 
