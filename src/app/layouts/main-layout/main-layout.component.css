@@ -5,7 +5,7 @@
     -webkit-box-flex: 79% !important;
     -ms-flex: 79% !important;
     padding:25px;
-    min-height:calc(100vh - 155px);
+    min-height:calc(100vh - 110px);
     
 }
 .main-content h1 {

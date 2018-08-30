@@ -8,7 +8,7 @@ import { ReportsComponent } from './reports/reports.component';
 import { QuestionComponent } from './questions/question/question.component';
 import { FormsModule } from '@angular/forms';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
-
+import {NgxPaginationModule} from 'ngx-pagination';
 import { UsersComponent } from './users/users.component';
 
 @NgModule({
@@ -16,7 +16,8 @@ import { UsersComponent } from './users/users.component';
     CommonModule,
     FormsModule,
     AdminRoutingModule,
-    Ng2SmartTableModule
+    Ng2SmartTableModule,
+    NgxPaginationModule
   ],
   declarations: [DashboardComponent, QuestionsComponent, ReportsComponent, QuestionComponent, UsersComponent]
 })

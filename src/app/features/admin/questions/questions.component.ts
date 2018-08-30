@@ -12,7 +12,7 @@ export class QuestionsComponent implements OnInit {
 
   ngOnInit() {
     const exames = this._examService.getAll();
-    const examName = exames[1].id;
+    const examName = exames[3].id;
     this.loadExam(examName);
   }
 
