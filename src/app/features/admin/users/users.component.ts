@@ -14,17 +14,35 @@ export class UsersComponent implements OnInit {
 
   ngOnInit() {
     this
-    ._userService
-    .getCharacters()
-    .subscribe((data: Table[]) => {
-      this.characters = data;
-  });
+      ._userService
+      .getCharacters()
+      .subscribe((data: Table[]) => {
+        this.characters = data;
+      });
   }
 
 
 
   // tslint:disable-next-line:member-ordering
   settings = {
+    add: {
+      addButtonContent: '<i class="fa fa-plus"></i>',
+      createButtonContent: '<i class="fa fa-check"></i>',
+      cancelButtonContent: '<i class="fa fa-times"></i>',
+    },
+    edit: {
+      editButtonContent: '<i class="fa fa-pencil-square-o"></i>',
+      saveButtonContent: '<i class="fa fa-floppy-o"></i>',
+      cancelButtonContent: '<i class="fa fa-times"></i>',
+    },
+    delete: {
+      deleteButtonContent: '<i class="fa fa-trash-o"></i>',
+      confirmDelete: true,
+    },
+    noDataMessage: 'No Users To show ',
+    attr: {
+      class: 'table table-bordered'
+    },
     columns: {
       id: {
         title: 'ID'

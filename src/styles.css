@@ -5,8 +5,6 @@ body {
     
     margin: 0 0 0 2px;
 }
-
-
 .login-box, .register-box {
     width: 360px;
     margin: 7% auto;
@@ -267,7 +265,6 @@ header .header-mobile-menu .navbar-toggler:after{
 .profile-details-menu .navbar-toggler::after {
   content: '\2807';
   font-size: 32px;
-  /* color: #005EB8; */
   color: magenta;
 }
 .profile-details .collapse {
@@ -294,7 +291,44 @@ header .header-mobile-menu .navbar-toggler:after{
   margin: 10px 10px;
 }
 
+a.ng2-smart-action.ng2-smart-action-edit-save, a.ng2-smart-action.ng2-smart-action-add-create,a.ng2-smart-action.ng2-smart-action-edit-edit
+{
+    padding-right: 12px;  
+}
+a.ng2-smart-action.ng2-smart-action-add-add
+{
+    padding-left:16px;
+}
+tr.ng2-smart-titles{
+    background-color:#044C86
+}
+th.ng2-smart-actions, a.ng2-smart-sort-link.sort, .ng2-smart-title{
+    color: white;
+    text-align: center;
+}
 
+ng2-smart-table tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+ng2-smart-table tbody tr:nth-child(even) {
+    background-color: rgba(211, 238, 218, 0.8);
+}
+
+td.ng2-smart-actions {
+    text-align: center;
+}
+th.ng2-smart-actions-title.ng2-smart-actions-title-add {
+    text-align: center;
+}
+.ng2-smart-pagination .page-link-next, .ng2-smart-pagination .page-link-prev {
+    font-size: 10px;
+    line-height: 17px !important;
+  }
+
+  nav.ng2-smart-pagination-nav {
+      padding-left: calc(50%);
+  }
 @media screen and (max-width: 500px) {
     .header a {
       float: none;
@@ -306,3 +340,7 @@ header .header-mobile-menu .navbar-toggler:after{
       float: none;
     }
   }
+
+
+
+  
