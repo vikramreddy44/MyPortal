@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { DialogComponent, DialogService } from '../../custom_modules/dialogModule';
+import { IConfirmModel } from '../class/IConfirmModel';
 
 @Component({
   selector: 'app-confirm-modal',
   templateUrl: './confirm-modal.component.html',
   styleUrls: ['./confirm-modal.component.css']
 })
-export class ConfirmModalComponent extends DialogComponent<ConfirmModel, boolean> implements ConfirmModel {
+export class ConfirmModalComponent extends DialogComponent<IConfirmModel, boolean> implements IConfirmModel {
   title: string;
   message: string;
   showFooter: boolean;
@@ -17,9 +18,4 @@ export class ConfirmModalComponent extends DialogComponent<ConfirmModel, boolean
     this.result = true;
     this.close();
   }
-}
-export interface ConfirmModel {
-  title: string;
-  message: string;
-  showFooter: boolean;
 }

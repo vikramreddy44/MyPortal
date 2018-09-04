@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ExamService } from '../../exam/exam/exam.service';
+import { Router } from '@angular/router';
+import { AddQuestionComponent } from './add-question/add-question.component';
+import { DialogService } from '../../../custom_modules/dialogModule';
+import { debug } from 'util';
+import { EditQuestionComponent } from './edit-question/edit-question.component';
 
 @Component({
   selector: 'app-questions',
@@ -8,7 +13,7 @@ import { ExamService } from '../../exam/exam/exam.service';
 })
 export class QuestionsComponent implements OnInit {
   questions;
-  constructor(private _examService: ExamService) { }
+  constructor(private _examService: ExamService, private router: Router, private dialogService: DialogService) { }
 
   ngOnInit() {
     const exames = this._examService.getAll();
@@ -24,6 +29,34 @@ export class QuestionsComponent implements OnInit {
         console.log('error;');
       });
 
+  }
+
+  addNewQuestion() {
+    const disposable = this.dialogService.addDialog(AddQuestionComponent, {
+      title: 'Add Questions',
+      message: 'Once submitted, you can no longer view/modify this test. Are you sure you wish to submit this test?',
+      showFooter: true,
+    }).subscribe((isConfirmed) => {
+      if (isConfirmed) {
+        // this.onSubmit();
+      } else {
+
+      }
+    });
+  }
+  questionClick(question) {
+
+
+    const disposable = this.dialogService.addDialog(EditQuestionComponent, {
+      title: 'Edit Questions',
+      message: 'Once submitted, you can no longer view/modify this test. Are you sure you wish to submit this test?',
+      id: question.id,
+      questionName: question.name,
+      showFooter: true,
+      IOptions: question.options,
+    }).subscribe((isConfirmed) => {
+
+    });
   }
 
 }

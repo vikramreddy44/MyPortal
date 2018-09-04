@@ -329,6 +329,82 @@ th.ng2-smart-actions-title.ng2-smart-actions-title-add {
   nav.ng2-smart-pagination-nav {
       padding-left: calc(50%);
   }
+  .error{
+      color: red !important;
+  }
+
+
+  .modal-box {
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    height: 100%;
+}
+.modal-dialog {
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 70%;
+    border-radius: 0px;
+}
+.modal-dialog .modal-content {
+    border: 1px solid #f1f1f1;
+    border-radius: 0px;
+}
+.modal-dialog .modal-header {
+    background-color: #5F5F60;
+    color: #f1f1f1;
+    border-radius: 0px;
+    padding: 10px 15px;
+}
+.modal-dialog .modal-header .modal-title, .modal-dialog .modal-header a {
+    color: #f1f1f1 !important;
+    font-size: 18px;
+}
+
+.modal-dialog .modal-sub-header {
+    background-color: #fbfbfb;
+    padding: 5px 15px;
+    overflow: hidden;
+}
+.modal-dialog .modal-sub-header div{
+    color: #b8b8b8;
+    font-size: 14px;
+    font-weight: 500;
+}
+.modal-dialog .modal-body .form-group label{
+    width: 100%;
+    color: #707070;
+}
+.modal-dialog .modal-body .form-group label + input, .modal-dialog .modal-body .form-group label + textarea {
+    width: 100%;
+    border: 1px solid #e6e6e6;
+    padding:5px 10px;
+}
+.modal-dialog .modal-body .form-group label + textarea {
+    height: 75px;
+}
+.modal-dialog .modal-body .form-group input::-webkit-input-placeholder,
+.modal-dialog .modal-body .form-group textarea::-webkit-input-placeholder {
+    color: #c2c2c2;
+    font-size: 14px;
+}
+.modal-dialog .modal-body .form-group span {
+    color: #c2c2c2;
+    font-size: 14px;
+}
+.modal-dialog .modal-footer {
+    justify-content: center;
+}
+
+.modal-header h4{
+    color: white;
+}
+
+
+
 @media screen and (max-width: 500px) {
     .header a {
       float: none;

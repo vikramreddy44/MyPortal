@@ -10,6 +10,9 @@ import { BootstrapModalModule } from './custom_modules/dialogModule';
 import { SharedModule } from './shared/shared.module';
 import { ConfirmModalComponent } from './shared/confirm-modal/confirm-modal.component';
 import { NgProgressModule, NgProgressInterceptor } from 'ngx-progressbar';
+import { AddQuestionComponent } from './features/admin/questions/add-question/add-question.component';
+import { AdminModule } from './features/admin/admin.module';
+import { EditQuestionComponent } from './features/admin/questions/edit-question/edit-question.component';
 
 
 @NgModule({
@@ -25,13 +28,16 @@ import { NgProgressModule, NgProgressInterceptor } from 'ngx-progressbar';
     LayoutsModule,
     AppRoutingModule,
     NgProgressModule,
+    AdminModule,
     BootstrapModalModule.forRoot({ container: document.body })
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: NgProgressInterceptor, multi: true }
   ],
   entryComponents: [
-    ConfirmModalComponent
+    ConfirmModalComponent,
+    AddQuestionComponent,
+    EditQuestionComponent
   ],
   bootstrap: [AppComponent]
 })

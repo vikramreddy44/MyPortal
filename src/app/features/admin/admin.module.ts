@@ -8,8 +8,11 @@ import { ReportsComponent } from './reports/reports.component';
 import { QuestionComponent } from './questions/question/question.component';
 import { FormsModule } from '@angular/forms';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
-import {NgxPaginationModule} from 'ngx-pagination';
+import { NgxPaginationModule } from 'ngx-pagination';
 import { UsersComponent } from './users/users.component';
+import { EditQuestionComponent } from './questions/edit-question/edit-question.component';
+import { AddQuestionComponent } from './questions/add-question/add-question.component';
+
 
 @NgModule({
   imports: [
@@ -19,6 +22,7 @@ import { UsersComponent } from './users/users.component';
     Ng2SmartTableModule,
     NgxPaginationModule
   ],
-  declarations: [DashboardComponent, QuestionsComponent, ReportsComponent, QuestionComponent, UsersComponent]
+  declarations: [DashboardComponent, QuestionsComponent, ReportsComponent, QuestionComponent,
+    UsersComponent, EditQuestionComponent, AddQuestionComponent],
 })
 export class AdminModule { }

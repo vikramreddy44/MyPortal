@@ -4,7 +4,7 @@
     "description": "C#, Asp.Net,Design Patterns and .Net Quiz (contains C#, .Net Framework, Linq, etc.)",
     "config": {
         "shuffleQuestions": true,
-        "showPager": false,
+        "showPager": true,
         "allowBack": true,
         "autoMove": true
     },
