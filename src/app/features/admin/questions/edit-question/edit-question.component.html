@@ -66,12 +66,22 @@
         </div>
         <div class="col-8">
           <div *ngFor="let option of IOptions">
-            <label>
+            <!-- <label>
               <input type="radio" name="options" (change)="onSelectionChange(option)" value="{{option.value}}" [checked]="option.isAnswer"
               /> {{option.name}}
               <a (click)='removeOption(option)'>
                 <i class="fa fa-times error" aria-hidden="true"></i> Remove</a>
-            </label>
+            </label> -->
+            <div class="row">
+                <div class="col-col-1">
+                    <a (click)='removeOption(option)'>
+                        <i class="fa fa-times error" aria-hidden="true"></i> Remove</a>
+                </div>
+              <div class="col col-8">
+                  <input type="radio" name="options" (change)="onSelectionChange(option)" value="{{option.value}}" [checked]="option.isAnswer"
+                  /> {{option.name}}
+              </div>             
+            </div>
           </div>
         </div>
       </div>

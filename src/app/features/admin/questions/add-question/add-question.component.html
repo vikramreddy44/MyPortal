@@ -4,12 +4,6 @@
       <h4 class="modal-title">{{title}}</h4>
       <a href="javascript:void()" (click)="close()">X</a>
     </div>
-    <!-- <div class="modal-sub-header">
-      <div class="text-center">
-        <h2>Add Questions</h2>
-      </div>
-      <div class="w-50 text-right float-right">{{userName}}</div>
-    </div> -->
     <div class="modal-body">
       <div class="row">
         <div class="col-4 form-group">
@@ -44,7 +38,6 @@
       <div class="row">
         <div class="col-12 form-group ">
           <textarea class="form-control" placeholder="Please Enter Question"></textarea>
-
         </div>
       </div>
       <div class="row">
@@ -66,12 +59,22 @@
         </div>
         <div class="col-8">
           <div *ngFor="let option of options">
-            <label>
-              <input type="radio" name="options" (change)="onSelectionChange(option)" value="{{option.value}}" [checked]="option.checked"
-              /> {{option.name}} 
-              <a (click)='removeOption(option)' ><i class="fa fa-times error" aria-hidden="true"></i> Remove</a>
-              
-            </label>
+            <div class="row">
+                <div class="col-col-1">
+                    <a (click)='removeOption(option)'>
+                        <i class="fa fa-times error" aria-hidden="true"></i> Remove</a>
+                </div>
+              <div class="col col-8">
+                  <input type="radio" name="options" (change)="onSelectionChange(option)" value="{{option.value}}" [checked]="option.checked"
+                  /> {{option.name}}
+              </div>             
+            </div>
+            <!-- <input type="radio" name="options" (change)="onSelectionChange(option)" value="{{option.value}}" [checked]="option.checked"
+            /> {{option.name}}
+            <a (click)='removeOption(option)'>
+              <i class="fa fa-times error" aria-hidden="true"></i> Remove</a> -->
+
+
           </div>
         </div>
       </div>
@@ -87,4 +90,3 @@
     </div>
   </div>
 </div>
-
